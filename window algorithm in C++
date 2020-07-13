@@ -1,0 +1,18 @@
+The sliding window algorithm can be used to solve problems that involve linear sequences, such as arrays. A window is a contiguous sequence which is part of an array. As the
+name suggests, the window is slid over the array. Some operations are performed on elements within this window, and then the window is slid further.
+Let’s look at an example problem to make things clearer.
+
+Example
+We are given an array of size NN; we need to calculate the maximum sum of KK consecutive elements.
+
+The most obvious solution would be to find all possible blocks of KK elements, and pick the one with the largest sum.
+
+The optimal solution, however, uses the sliding window algorithm. Here is how it works:
+
+Add the first KK elements together, and store the sum in the variable currentSum. Since this is the first sum, it is also the current maximum, so store it in variable maximumSum as well.
+Since the window size is KK, we slide the window one place to the right, and compute the sum of the elements in the window.
+If the currentSum is larger than the maximumSum, then update the maximum and repeat step 2. This is illustrated below:
+ 
+ 
+ **Refer this link
+ https://www.educative.io/edpresso/how-to-implement-a-sliding-window-algorithm-in-cpp#:~:text=The%20sliding%20window%20algorithm%20can,linear%20sequences%2C%20such%20as%20arrays.&text=As%20the%20name%20suggests%2C%20the,problem%20to%20make%20things%20clearer.
