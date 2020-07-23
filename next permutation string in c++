@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+class Solution {
+public:
+    void nextPermutation(vector<int>& nums) {
+        int c=0,h,i,j,g=0,m=0;
+        string s;
+        int k=nums.size();
+        for(i=0;i<k;i++)
+        {
+           s.push_back(nums[i]);
+        }
+        **bool val = next_permutation(s.begin(),s.end());**
+    if (val == false) 
+    {
+        sort(nums.begin(),nums.end());
+    }
+    else{
+        for(i=0;i<k;i++)
+        {
+           nums[i]=s[i];
+        }
+    }
+         
+    
+    }
+   
+};
