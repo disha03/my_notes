@@ -9,7 +9,7 @@ public:
         {
            s.push_back(nums[i]);
         }
-        **bool val = next_permutation(s.begin(),s.end());**
+        ** bool val = next_permutation(s.begin(),s.end()); **
     if (val == false) 
     {
         sort(nums.begin(),nums.end());
@@ -25,3 +25,6 @@ public:
     }
    
 };
+
+** link https://leetcode.com/submissions/detail/370525211/
+    https://stackoverflow.com/questions/1622532/algorithm-to-find-next-greater-permutation-of-a-given-string
