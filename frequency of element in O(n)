@@ -1,0 +1,35 @@
+when you want to store frequency ,using map and dict use O(nlogn) but if we want to do this in O(n) then use this concept ,in this concept use element as index of array because 
+index is unique and initialise all element to 0 and increase index to 1 whenever the element comes its value if is not equal to 0,this means the particular index value is more 
+than  means element is repeating
+
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long int
+int main() {
+	ll i,j,k,sum=0,h,n,t,m;
+	cin>>t;
+	while(t--)
+	{
+	    sum=0;
+	    cin>>n;
+	    vector<ll>v(n+1,0);
+	    h=((n*(n+1))/2);
+	    for(i=0;i<n;i++)
+	    {
+	       cin>>k;
+	       if(v[k]!=0)
+	       {
+	           j=k;
+	       }
+	       else{
+	       v[k]=1;
+	           sum+=k;
+	       }
+	    }
+	    m=h-sum;
+	    cout<<j<<" "<<m<<"\n";
+	}
+	return 0;
+}
+	  
+  **link https://practice.geeksforgeeks.org/problems/find-missing-and-repeating/0
