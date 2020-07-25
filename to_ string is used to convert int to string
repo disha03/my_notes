@@ -1,0 +1,27 @@
+https://www.interviewbit.com/problems/fizzbuzz/
+vector<string> Solution::fizzBuzz(int A) {
+    vector<string>v(A);
+    for(int j=0;j<A;j++)
+    {
+        int i=j+1;
+        if(i%3==0 and i%5==0)
+        {
+            v[j]="FizzBuzz";
+        }
+        else if(i%3==0)
+        {
+            v[j]="Fizz";
+        }
+        else if(i%5==0)
+        {
+            v[j]="Buzz";
+        }
+        else{
+            v[j]=to_string(i);
+        }
+    }
+    return v;
+}
+
+
+https://www.geeksforgeeks.org/converting-string-to-number-and-vice-versa-in-c/
