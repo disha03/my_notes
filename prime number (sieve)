@@ -1,0 +1,51 @@
+Firstly create and vector of length n if u find no. of prime no. in range(1,n),initialse this vector to 1 ,meand the no. is prime,then if value of index is 1,then all the 
+multiple of this index would be 0,because ex if we have index 2 value as 1 the all multiple of 2 is 0.
+here the code
+vector<int> Solution::primesum(int A) {
+    vector<int>v(1001,1);
+    long i,h,j,c=0;
+    v[0]=0;
+    v[1]=0;
+    for(i=2;i*i<1000;i++)
+    {
+        if(v[i]==1)
+        {
+            for(j=i*i;j<1000;j+=i)
+            {
+                v[j]=0;
+            }
+        }
+    }
+    for(i=2;i<v.size();i++)
+    {c=0;
+        if(v[i]==1)
+        {
+            h=A-i;
+            for(j=2;j*j<=h;j++)
+            {
+                if(h%j==0)
+                {
+                    c++;
+                    break;
+                }
+            }
+            if(c==0){
+                v.clear();
+                if(i<=h){
+                v.push_back(i);
+                v.push_back(h);
+                break;
+                }
+                else{
+                   v.push_back(h);
+                   v.push_back(i); 
+                   break;
+                }
+            }
+        }
+    }
+    return v;
+}
+
+question link https://www.interviewbit.com/problems/prime-sum/
+link https://www.geeksforgeeks.org/analysis-different-methods-find-prime-number-python/   (sieve method)
