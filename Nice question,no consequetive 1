@@ -10,7 +10,7 @@ int main() {
     g[1]=1;
     for(i=2;i<=101;i++)
     {
-        g[i]=(g[i-1]+g[i-2])%M;
+        g[i]=(g[i-1]+g[i-2])%M;			//fibonacccii pattern
     }
 	while(t--)
 	{
