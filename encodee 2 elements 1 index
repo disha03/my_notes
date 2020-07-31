@@ -20,4 +20,9 @@ Given a number as
    A / N = C
 We use this fact to encode 2 numbers into each element of Arr.
 
+
+***********(Arr[Arr[i]] % n)===new element
+***********Arr[i]=old element
+decide how to put new element here like what pattern want in question,what no. replacing trick is use
+
 ****https://www.interviewbit.com/problems/rearrange-array/
