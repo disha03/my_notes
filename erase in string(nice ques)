@@ -1,0 +1,44 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define fast ios_base::sync_with_stdio(false); cin.tie(NULL)
+#define ll long long int
+int main() {
+	fast;
+	ll i,j,t,n;
+	cin>>t;
+	string s,str;
+	while(t--)
+	{
+	    ll h=0;
+	    str.clear();
+	    cin.ignore();
+	    getline(cin,str);
+	    cin>>n;
+	    s=str;
+	    stringstream sk(s);
+	    str.erase(remove(str.begin(), str.end(), ' '), str.end());
+	    // Used for breaking words 
+    string word; // to store individual words(string),u can alseo use integer also,int i;then s>>i
+  
+    int count = 0; 
+    while (sk >> word){
+	    cout<<word;
+	    h+=word.size();
+	    if(h!=str.size())
+	    {
+	        cout<<"%20";
+	        //cout<<h<<"\n";
+	    }
+    }
+	 cout<<"\n";   
+	   
+	}
+	return 0;
+}
+
+
+
+
+
+
+*******https://practice.geeksforgeeks.org/problems/urlify-a-given-string/0
