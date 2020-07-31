@@ -1,0 +1,20 @@
+***********8remember let a be string then a+a contai all rotations of string a
+
+string str = "geeksforgeeks a computer science"; 
+    string str1 = "geeks"; 
+  
+    // Find first occurrence of "geeks" 
+    size_t found = str.find(str1); 
+    if (found != string::npos) 
+        cout << "First occurrence is " << found << endl; 
+ 
+The function returns the index of the first occurrence of sub-string, if the sub-string is not found it returns string::npos(string::pos is static member with value
+das the highest possible for the size_t data structure).
+string::npos------It means not found.
+
+It is usually defined like so:
+
+static const size_t npos = -1;
+***a.find(b);
+https://practice.geeksforgeeks.org/problems/check-if-strings-are-rotations-of-each-other-or-not/0
+solution-- https://ide.geeksforgeeks.org/tLbUxUHVVN
