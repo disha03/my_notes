@@ -1,0 +1,14 @@
+string stream is also used to break words
+    string s;
+    int t;
+    cin>>t;
+    cin.ignore()
+    getline(cin,str)
+    stringstream s(str); // Used for breaking words 
+    string word; // to store individual words(string),u can alseo use integer also,int i;then s>>i
+  
+    int count = 0; 
+    while (s >> word) 
+        count++; 
+        
+Remember if you input no. test case or any integer then after using getline,you have to use *******************cin.ignore()************************** then use getline(cin,s)
