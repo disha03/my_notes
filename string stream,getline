@@ -9,6 +9,7 @@ string stream is also used to break words
   
     int count = 0; 
     while (s >> word) 
-        count++; 
+        count++;
+        cout<<word<<"\n";
         
 Remember if you input no. test case or any integer then after using getline,you have to use *******************cin.ignore()************************** then use getline(cin,s)
