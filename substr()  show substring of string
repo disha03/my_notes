@@ -1,0 +1,28 @@
+string substr (size_t pos, size_t len) const;
+Parameters:
+pos: Position of the first character to be copied.
+len: Length of the sub-string.
+size_t: It is an unsigned integral type.
+
+Return value: It returns a string object.
+
+substr(position,length of substring)
+
+int strstr(string s, string x)
+{
+     int h=x.size(),i,c=0;
+     for(i=0;i<s.size();i++)
+     {
+         //cout<<s.substr(i,h)<<" ";
+         if(x==s.substr(i,h))
+         {
+             
+             return i;
+            
+         }
+     }
+         return -1;
+}
+
+
+*********https://practice.geeksforgeeks.org/problems/implement-strstr/1
