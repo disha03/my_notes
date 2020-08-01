@@ -1,0 +1,56 @@
+***************https://practice.geeksforgeeks.org/problems/longest-palindrome-in-a-string/0
+
+
+#include <bits/stdc++.h>
+using namespace std;
+#define fast ios_base::sync_with_stdio(false); cin.tie(NULL)
+#define ll long long int
+int main() {
+	fast;
+	ll i,j,t,n,maxi,k;
+	cin>>t;
+	 cin.sync();
+	string s,m,h,r;
+	while(t--)
+	{maxi=0;
+	k=1;
+	    cin>>s;
+	    m=s;
+	    reverse(m.begin(),m.end());
+	    if(m==s)
+	    {
+	       cout<<s<<"\n";
+	       continue;
+	    }
+	    for(i=0;i<s.size()-1;i++)
+	    {   m.clear();
+	        while(s.size()-k-i>0){
+	        
+	        r=s.substr(i,s.size()-k-i);
+	        m=r;
+	        reverse(m.begin(),m.end());
+	        //cout<<m<<" ";
+	        if(m==r){
+	            //cout<<m<<" "<<r;
+	            if(s.size()-k-i>maxi) {
+	            maxi=s.size()-k-i;
+	            h=r;
+	            //cout<<s.size()-k-i;
+	            break;
+	            }
+	        }
+	        m.clear();
+	        r.clear();
+	        k++;
+	        
+	        }
+	        k=0;
+	    }
+	        cout<<h<<"\n";
+	        
+
+	    
+	    
+	}
+	return 0;
+}
