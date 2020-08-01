@@ -28,3 +28,36 @@ public:
 
 ** link https://leetcode.com/submissions/detail/370525211/
     https://stackoverflow.com/questions/1622532/algorithm-to-find-next-greater-permutation-of-a-given-string
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+#define fast ios_base::sync_with_stdio(false); cin.tie(NULL)
+#define ll long long int
+int main() {
+	fast;
+	ll i,j,t,n;
+	cin>>t;
+	 cin.sync();
+	string s,m;
+	while(t--)
+	{
+	    cin>>s;
+	    sort(s.begin(),s.end());
+	    cout<<s<<" ";
+	    while(next_permutation(s.begin(), 
+                           s.end()) ){
+                           {
+                               cout<<s<<" ";
+                               
+                           }
+                           }
+                           cout<<"\n";
+	    
+	}
+	return 0;
+}
+
+
+****https://practice.geeksforgeeks.org/problems/permutations-of-a-given-string/0
