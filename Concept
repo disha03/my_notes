@@ -1,0 +1,32 @@
+When you have to link list which is merged in Y shape and u need to find intersection point then multiply all element of any 1 listby -1(if 0 is not considered),otherwise
+multiply list element by -1 and add +1. and traverse the second list if non positive element is present in list print it
+
+int intersectPoint(Node* head1, Node* head2)
+{
+    Node *a=head1,*b =head2;
+    int c=0,mini=1001,maxi=0,minb=1001,maxb=0,h=0;
+    while(a!=NULL)
+    {
+        a->data=(-1)*(a->data+1);
+       
+         a=a->next;
+    }
+    while(b!=NULL)
+    {
+        //cout<<b->data<<" ";
+        if((b->data+1)<=0)
+        {
+            return (-1)*(b->data +1);
+        }
+        
+        b=b->next;
+        
+    }
+
+    //cout<<maxi <<" "<<mini<<" "<<minb<<" "<<maxb<<" ";
+    
+    return -1;
+}
+
+
+******https://practice.geeksforgeeks.org/problems/intersection-point-in-y-shapped-linked-lists/1/
