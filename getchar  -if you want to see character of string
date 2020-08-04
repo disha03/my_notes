@@ -1,0 +1,28 @@
+***get character takes thi character, run the loop from !EOF
+
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long int
+int main() {
+	ll i,j=0,t,n;
+	cin>>t;
+	cin.ignore();
+	char c;
+	while(t--)
+	{  vector<int>v(257,0);
+	   while (((c = getchar()) != '\n') && (c != EOF))
+        {
+            v[int(c)]++;
+            if(v[int(c)]==1)
+            {
+                cout<<c;
+            }
+        }
+        cout<<"\n";
+
+	}
+	return 0;
+}
+
+https://practice.geeksforgeeks.org/problems/remove-duplicates/0
