@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+struct node{
+    node *left;
+    int data;
+    node *right;
+};
+node* newnode(int data){
+    node *newx=new(node);
+    newx->left=NULL;
+    newx->right=NULL;
+    newx->data=data;
+    return newx;
+}
+void print(node* root)
+{
+    if(root==NULL)
+    {
+        return;
+    }
+    if(root->left==NULL && root->right==NULL)
+    {
+        cout<<root->data<<" ";
+        
+    }
+    else{
+        print(root->left);
+        print(root->right);
+    }
+}
+int main() {
+	node* root = newnode(1); 
+    root->left = newnode(2); 
+    root->right = newnode(3); 
+    root->left->left = newnode(4); 
+    root->right->left = newnode(5); 
+    root->right->right = newnode(7); 
+    root->left->left->left = newnode(10); 
+    root->left->left->right = newnode(11); 
+    root->right->right->left = newnode(8); 
+  
+    print(root);
+   
+	return 0;
+}
