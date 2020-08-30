@@ -1,0 +1,42 @@
+int height(Node * root)
+{
+    if(root==NULL)
+    {
+        return 0;
+    }
+    int l=height(root->left);
+    int r=height(root->right);
+    return max(l+1,r+1);
+}
+void printt(Node *root,int h,int c,vector<int>&v)
+{
+    if(root==NULL)
+    {
+        return;
+    }
+    if(h==1)
+    {
+        v.push_back(root->data);
+    }
+    else{
+        if(c%2!=0){
+        printt(root->right,h-1,c,v);
+        printt(root->left,h-1,c,v);
+        }
+        else{
+           printt(root->left,h-1,c,v); 
+           printt(root->right,h-1,c,v);
+        }
+        
+    }
+}
+vector <int> zigZagTraversal(Node* root)
+{
+	int h=height(root);
+	vector<int>v;
+	for(int i=1;i<=h;i++)
+	{
+	    printt(root,i,i-1,v);
+	}
+	return v;
+}
