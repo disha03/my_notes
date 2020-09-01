@@ -1,0 +1,42 @@
+//left view 
+
+
+void printt(Node* root,int h,int &c)
+{
+    if(root==NULL || c!=0)
+    {
+        return;
+    }
+    else if(h==1 && c==0)
+    {
+        cout<<root->data<<" ";
+        c++;
+        
+    }
+    else{
+        printt(root->left,h-1,c);
+        //cout<<c<<" ";
+        printt(root->right,h-1,c);
+    }
+}
+int height(Node* root)
+{
+    if(root==NULL)
+    {
+        return 0;
+    }
+    int l=height(root->left);
+    int r=height(root->right);
+    return max(l+1,r+1);
+}
+// A wrapper over leftViewUtil()
+void leftView(Node *root)
+{
+   int i,j;
+    int h=height(root);
+    for(i=1;i<=h;i++)
+    {
+        int c=0;
+        printt(root,i,c);
+    }
+}
