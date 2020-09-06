@@ -1,0 +1,13 @@
+whenever u need to find that given substring is there in string u can add the string t2wice and remove llast and first element
+https://leetcode.com/problems/repeated-substring-pattern/submissions/
+int n=s.size();
+        string g=s+s;
+        string a=g.substr(1,(2*n-2));
+        int found = a.find(s);
+        cout<<g<<" "<<a<<" ";
+    if (found == string::npos) 
+    {
+        return false;
+    }
+        return true;
+        
