@@ -1,0 +1,13 @@
+ void deleteNode(ListNode* node) {
+        ListNode* p=node,*prev;
+        while(p->next!=NULL)
+        {
+            p->val=p->next->val;
+            prev=p;
+            p=p->next;
+        }
+        prev->next=NULL;
+       delete p;
+    
+        
+    }
