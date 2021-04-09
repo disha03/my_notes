@@ -28,7 +28,5 @@ int Solution::maxProfit(const vector<int> &A) {
     {
         ans=max(ans,l[i]+r[i]);
     }
-    return ans;
-    
-    
+    return ans;    
 }
