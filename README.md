@@ -3,7 +3,7 @@
 
 ## Overview
 
-The repository is a collection of open-source implementation of a variety of algorithms/ Standard problems implemented in C++. Hence, I tried to implementate the codes of same pattern or standard problem.
+The repository is a collection of open-source implementation of a variety of algorithms/ Standard problems implemented in C++. Hence, I tried to implementate the codes of same pattern or standard problem with the standard & efficient approach.
 
 ## Features
 
