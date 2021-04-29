@@ -1,29 +1,29 @@
-//with obstacle
 class Solution {
 public:
     
-int sol(int A,int B,vector<vector<int>>obstacleGrid,int dp[1000][1000])
+int sol(int i,int j,int A,int B,vector<vector<int>>&obstacleGrid,int dp[101][101])
 {
-    if(A<0 || B<0)
+    
+    if(i>=A || j>=B || obstacleGrid[i][j]==1)
     {
-        return 0;
+        return dp[A][B]=0;
     }
-    if(obstacleGrid[A][B]==1)
+    if(i==A-1 && j==B-1)
     {
-        return 0;
+        return dp[A][B]=1;
     }
    
-    if(dp[A][B]!=0)
+    if(dp[i][j]>0)
     {
-        return dp[A][B];
+        return dp[i][j];
     }
-    return dp[A][B]=sol(A-1,B,obstacleGrid,dp)+sol(A,B-1,obstacleGrid,dp);
+    return dp[i][j]=sol(i+1,j,A,B,obstacleGrid,dp)+sol(i,j+1,A,B,obstacleGrid,dp);
 }
 int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid) {
-        int dp[1000][1000];
+        int dp[101][101];
         memset(dp,0,sizeof(dp));
         int A=obstacleGrid.size(),B=obstacleGrid[0].size();
-        sol(A,B,obstacleGrid,dp);
-    return dp[A][B];
+        return sol(0,0,A,B,obstacleGrid,dp);
+   
     }
 };
