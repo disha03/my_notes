@@ -8,7 +8,7 @@ int Solution::largestRectangleArea(vector<int> &A) {
         {
             l[i]=-1;
         }
-        else if(s.top().first<A[i])
+        else if(s.top().first<A[i])             //next shortest_right because compare till we find next shortes because if greater histogram we can make rectangle 
         {
             l[i]=s.top().second;
         }
