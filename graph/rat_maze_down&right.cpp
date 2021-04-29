@@ -1,3 +1,4 @@
+//no obstacle
 int dp[1000][1000];
 int sol(int i,int j,int A,int B)
 {
