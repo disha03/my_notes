@@ -1,4 +1,4 @@
-# my_notes👩🏽‍💻
+# My_notes👩🏽‍💻
 I have created this repo for practicing the coding problems.
 
 ## Overview
