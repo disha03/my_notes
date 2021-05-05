@@ -1,3 +1,4 @@
+//atmost 2 transation
 int Solution::maxProfit(const vector<int> &A) {
     int n=A.size(),ans=0,k;
      vector<int>l(n+2),r(n+2),maxi(n+2),mini(n+2);
@@ -15,7 +16,7 @@ int Solution::maxProfit(const vector<int> &A) {
     {
       k=min(k,A[i]);
       mini[i]=k;
-      l[i]=max(l[i-1],A[i]-mini[i]);
+      l[i]=max(l[i-1],A[i]-mini[i]);           //because not necessary that this particular array uses to find max transactio  so we find max answer till this transaction
     }
     k=A[n-1];
     for(int i=n-2;i>=0;i--)

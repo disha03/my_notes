@@ -1,7 +1,10 @@
 {
     "files.associations": {
         "vector": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "unordered_map": "cpp",
+        "string": "cpp",
+        "string_view": "cpp"
     },
     "jupyter.jupyterServerType": "local"
 }
