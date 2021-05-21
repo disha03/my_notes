@@ -25,7 +25,7 @@ vector<Interval> Solution::insert(vector<Interval> &intervals, Interval newInter
     int n=intervals.size();
     vector<Interval>v;
     int k=0,mini,maxi;
-    for(int i=0;i<intervals.size();i=k)
+    for(int i=0;i<intervals.size()-1;i=k)
     {
         
         k=i;
@@ -51,6 +51,10 @@ vector<Interval> Solution::insert(vector<Interval> &intervals, Interval newInter
         }
         
     }
+    if(k==n-1)
+        {
+             v.push_back(intervals[k]);
+        }
     return v;
     
     
