@@ -2,8 +2,8 @@ class Trie {
 public:
     /** Initialize your data structure here. */
     struct trienode{
-        char c;
-        trienode* arr[27];
+        char c;                     //character at that tree node
+        trienode* arr[27];          // store address at that nodes of all character
         bool count;
         
     };
